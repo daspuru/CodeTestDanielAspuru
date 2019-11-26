@@ -127,5 +127,50 @@ namespace AnexinetTestDanielAspuru
             return repeatedChars.ToArray();
         }
 
+        //6.- Write a program that computes (EQUATION)
+        // This answer uses Math.Pow, below it's a version without Math.Pow
+        public static double ComputeEquation()
+        {
+
+            int num = 1000000;
+            double summ = 0;
+            for (double k = 1; k <= num; k++)
+            {
+                summ += (Math.Pow(-1, k + 1) / (2 * k - 1));
+            }
+
+            double result = 4 * summ;
+
+            return result;
+
+        }
+
+        //6.- Write a program that computes (EQUATION)
+        // This answer solves the equation without the use of Math.Pow
+        public static double ComputeEquationRaw()
+        {
+
+            int num = 1000000;
+            double sumatoria = 0;
+            for (double k = 1; k <= num; k++)
+            {
+
+                if (k % 2 == 0)
+                {
+                    sumatoria = sumatoria - (1 / (2 * k - 1));
+                }
+                else
+                {
+                    sumatoria = sumatoria + (1 / (2 * k - 1));
+                }
+
+            }
+
+            double resultado = 4 * sumatoria;
+
+            return resultado;
+
+        }
+
     }
 }

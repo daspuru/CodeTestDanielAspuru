@@ -70,6 +70,18 @@ namespace AnexinetTestDanielAspuru
                 Console.WriteLine(e.Message + e.StackTrace);
             }
 
+            //6.- Write a program that computes (EQUATION)
+            //This function uses Pow
+            double result = Functions.ComputeEquation();
+            Console.WriteLine("Computed equation using Math.Pow");
+            Console.WriteLine(result.ToString());
+
+            //6.- Write a program that computes (EQUATION)
+            //This other version of the function calculates the equation witout the use of Pow
+            double resultRaw = Functions.ComputeEquationRaw();
+            Console.WriteLine("Computed equation without Math.Pow");
+            Console.WriteLine(resultRaw.ToString());
+
         }
     }
 }

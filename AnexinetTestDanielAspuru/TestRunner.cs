@@ -27,6 +27,11 @@ namespace AnexinetTestDanielAspuru
                                " is " + differenceInMinutes.ToString());
 
 
+            //3.- Write a function that reverses a given (as a parameter) string
+            string stringToReverse = "This is the string to reverse...";
+            string reversedString = Functions.ReverseString(stringToReverse);
+            Console.WriteLine("Original string: \"" + stringToReverse + "\", reversed version: \"" + reversedString + "\"");
+
         }
     }
 }

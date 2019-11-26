@@ -35,5 +35,27 @@ namespace AnexinetTestDanielAspuru
             //Use the TotalMinutes property of the TimeSpan class to get the total minutes.
             return timeSpan.TotalMinutes;
         }
+
+        //3.- Write a function that reverses a given (as a parameter) string
+        public static string ReverseString(string input)
+        {
+
+            //Create a char array of the size of the input string
+            char[] charArray = new char[input.Length];
+
+            //Declare a counter that will being incremented during the loop
+            int increasingPosition = 0;
+
+            //Iterate for each character of the string with two pointers
+            for (int decreasingPosition = input.Length - 1; decreasingPosition >= 0; decreasingPosition--)
+            {
+                //Cross the pointers to save the last character in the first position and so on in the loop
+                charArray[increasingPosition++] = input[decreasingPosition];
+            }
+
+            //Convert array to string and return
+            return new string(charArray);
+
+        }
     }
 }

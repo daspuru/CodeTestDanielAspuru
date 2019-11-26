@@ -1,8 +1,8 @@
 ﻿using System;
 namespace AnexinetTestDanielAspuru
 {
-    //Using the method RunTest() will run all test. This method is already called in the App.xaml.cs file.
-    //You can just run the app too see test results.
+    //By using the method RunTest() you can run all tests. This method is already called in the App.xaml.cs file.
+    //You can just run the app too see the test results in the Application Output.
     public static class TestRunner
     {
         public static void RunTest()
@@ -42,8 +42,7 @@ namespace AnexinetTestDanielAspuru
             //    create a function that returns an array of the characters that are repeated in both strings
             //    in the most efficient way.
 
-            //We use a try catch block in case this code breaks the rule:
-            //"Given 2 strings of unknown characters (but it can't be repeated)"
+            //We use a try catch block in case this client code breaks the rule by sending two equal strings
             try
             {
                 //Strings to test

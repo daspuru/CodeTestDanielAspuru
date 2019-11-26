@@ -43,10 +43,10 @@ namespace AnexinetTestDanielAspuru
             //Create a char array of the size of the input string
             char[] charArray = new char[input.Length];
 
-            //Declare a counter that will being incremented during the loop
+            //Declare a counter that will be incremented during the loop
             int increasingPosition = 0;
 
-            //Iterate for each character of the string with two pointers
+            //Iterate for each character of the string with two pointers (forward and reverse)
             for (int decreasingPosition = input.Length - 1; decreasingPosition >= 0; decreasingPosition--)
             {
                 //Cross the pointers to save the last character in the first position and so on in the loop
@@ -151,24 +151,24 @@ namespace AnexinetTestDanielAspuru
         {
 
             int num = 1000000;
-            double sumatoria = 0;
+            double summ = 0;
             for (double k = 1; k <= num; k++)
             {
 
                 if (k % 2 == 0)
                 {
-                    sumatoria = sumatoria - (1 / (2 * k - 1));
+                    summ = summ - (1 / (2 * k - 1));
                 }
                 else
                 {
-                    sumatoria = sumatoria + (1 / (2 * k - 1));
+                    summ = summ + (1 / (2 * k - 1));
                 }
 
             }
 
-            double resultado = 4 * sumatoria;
+            double result = 4 * summ;
 
-            return resultado;
+            return result;
 
         }
 
@@ -206,7 +206,7 @@ namespace AnexinetTestDanielAspuru
 
             }
 
-            //This adds the last calculated character count to the string
+            //This line adds the last calculated character count to the string
             compressedString += lastChar + countChar.ToString();
 
             //See if the compressed string is shorter than the original to see what string we should return

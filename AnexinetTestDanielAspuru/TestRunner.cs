@@ -16,6 +16,17 @@ namespace AnexinetTestDanielAspuru
 
             Console.WriteLine("String: \"" + stringToCountVowels + "\" has " +  numberOfVowles.ToString() + " vowels");
 
+
+            //2.- Write a function that receives 2 Date parameters and returns the time difference in minutes.
+            DateTime startDate = new DateTime(2019, 10, 26);
+            DateTime endDate = new DateTime(2019, 10, 27);
+
+            double differenceInMinutes = Functions.TimeDifferenceInMinutes(startDate, endDate);
+
+            Console.WriteLine("Difference in minutes from date: " + startDate.ToString() + " and " + endDate.ToString() +
+                               " is " + differenceInMinutes.ToString());
+
+
         }
     }
 }

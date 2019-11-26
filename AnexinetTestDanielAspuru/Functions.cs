@@ -27,6 +27,13 @@ namespace AnexinetTestDanielAspuru
             return totalVowels;
         }
 
-        
+        //2.- Write a function that receives 2 Date parameters and returns the time difference in minutes.
+        public static double TimeDifferenceInMinutes(DateTime startDate, DateTime endDate)
+        {
+            //Substract starting date from end date to get the time span
+            TimeSpan timeSpan = endDate.Subtract(startDate);
+            //Use the TotalMinutes property of the TimeSpan class to get the total minutes.
+            return timeSpan.TotalMinutes;
+        }
     }
 }

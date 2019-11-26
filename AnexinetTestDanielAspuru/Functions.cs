@@ -172,5 +172,53 @@ namespace AnexinetTestDanielAspuru
 
         }
 
+        //8.- Write a function to perform basic string compression using the counts of repeated characters;
+        //e.g "aabcccccaaa" would become "a2b1c5a3". If the compressed string would not become smaller than
+        //the original string, just print the original string.
+        public static string CompressString(string input)
+        {
+            //Variables for storing data
+            char lastChar = '\0'; //Null
+            int countChar = 0;
+
+            //Variable to store the compressed string
+            string compressedString = String.Empty;
+
+            //Iterate through each character of the string to compress
+            foreach (char character in input)
+            {
+                //Detect character change
+                if (character != lastChar && lastChar != '\0')
+                {
+                    //Add last character and count to compressed string
+                    compressedString += lastChar + countChar.ToString();
+                    //Reset counter
+                    countChar = 1;
+                }
+                else
+                {
+                    //Increment counter as the character was the same as the last iteration
+                    countChar++;
+                }
+
+                //Assign the character to lastChar for next iteration comparisons
+                lastChar = character;
+
+            }
+
+            //This adds the last calculated character count to the string
+            compressedString += lastChar + countChar.ToString();
+
+            //See if the compressed string is shorter than the original to see what string we should return
+            if (compressedString.Length < input.Length)
+            {
+                return compressedString;
+            }
+            else
+            {
+                return input;
+            }
+        }
+
     }
 }

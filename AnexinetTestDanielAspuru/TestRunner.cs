@@ -77,10 +77,18 @@ namespace AnexinetTestDanielAspuru
             Console.WriteLine(result.ToString());
 
             //6.- Write a program that computes (EQUATION)
-            //This other version of the function calculates the equation witout the use of Pow
+            //This alternate version of the function calculates the equation witout the use of Pow
             double resultRaw = Functions.ComputeEquationRaw();
             Console.WriteLine("Computed equation without Math.Pow");
             Console.WriteLine(resultRaw.ToString());
+
+            //8.- Write a function to perform basic string compression using the counts of repeated characters;
+            //e.g "aabcccccaaa" would become "a2b1c5a3". If the compressed string would not become smaller than
+            //the original string, just print the original string.
+            string stringToCompress = "aaaabbbccddddddddefffffgghhh";
+            string compressedString = Functions.CompressString(stringToCompress);
+            Console.WriteLine("Uncompressed string is: " + stringToCompress);
+            Console.WriteLine("Compressed string is: " + compressedString);
 
         }
     }

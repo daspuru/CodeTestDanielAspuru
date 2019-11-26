@@ -32,6 +32,12 @@ namespace AnexinetTestDanielAspuru
             string reversedString = Functions.ReverseString(stringToReverse);
             Console.WriteLine("Original string: \"" + stringToReverse + "\", reversed version: \"" + reversedString + "\"");
 
+            //4.- Print numbers from 1 to 200 and every time a number is divisible by 3, print the word "fizz"
+            //    instead of the number; every time the number is divisible by 5 print the number "buzz" and
+            //    every time the number is divisible by both (3 & 5) print the word "fizzbuzz".
+            Console.WriteLine("Printing the requested numbers");
+            Functions.PrintNumbers();
+
         }
     }
 }

@@ -38,6 +38,38 @@ namespace AnexinetTestDanielAspuru
             Console.WriteLine("Printing the requested numbers");
             Functions.PrintNumbers();
 
+            //5.- Given 2 strings of unknown characters(but it can't be repeated)
+            //    create a function that returns an array of the characters that are repeated in both strings
+            //    in the most efficient way.
+
+            //We use a try catch block in case this code breaks the rule:
+            //"Given 2 strings of unknown characters (but it can't be repeated)"
+            try
+            {
+                //Strings to test
+                string string1 = "abrcdhjkl";
+                string string2 = "artecdkl";
+
+                //Call function
+                char[] repeatedChars = Functions.ReturnRepeatedCharactersInStrings(string1, string2);
+
+                //Dump results
+                Console.Write("Repeated characters in strings \"" + string1 + "\" and \"" + string2 + "\" are: ");
+
+                foreach (char character in repeatedChars)
+                {
+                    Console.Write(character + " ");
+                }
+
+                Console.WriteLine();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Client code is breaking the rules of the test, both strings are equal.");
+                Console.WriteLine(e.Message + e.StackTrace);
+            }
+
         }
     }
 }

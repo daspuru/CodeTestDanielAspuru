@@ -87,5 +87,45 @@ namespace AnexinetTestDanielAspuru
                 }
             }
         }
+
+        //5.- Given 2 strings of unknown characters (but it can't be repeated) create a function that returns an
+        //array of the characters that are repeated in both strings in the most efficient way.
+        public static char[] ReturnRepeatedCharactersInStrings(string string1, string string2)
+        {
+            // The rule of the test says: "Given 2 strings of unknown characters (but it can't be repeated)"
+            // so, if client code sends two repeated strings, throw an exception.
+            if (string1 == string2)
+                throw new Exception("Both strings are equal");
+
+            //Create a list of scanned characters
+            List<char> scannedChars = new List<char>();
+
+            //Create a list of repeated characters
+            List<char> repeatedChars = new List<char>();
+
+            //Iterate for all characters in first string
+            foreach (char character in string1)
+            {
+
+                //if Character has been already scanned, don't compare (to improve performance)
+                if (scannedChars.Contains(character))
+                    continue;
+
+                //Check if scanned character ocurrs in string 2
+                if (string2.Contains(character.ToString()))
+                {
+                    //Character found in string 2, add to repeated character's list
+                    repeatedChars.Add(character);
+                }
+
+                //Save the current character to the "already scanned" list
+                scannedChars.Add(character);
+
+            }
+
+            //Return repeated characters
+            return repeatedChars.ToArray();
+        }
+
     }
 }
